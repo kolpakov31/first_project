@@ -1,0 +1,31 @@
+.k {
+
+    background-color: #9faeb4;
+
+
+}
+
+.block {
+
+    font-size: 38px;
+    height:50%;
+    width:27%;
+    background: #c3ffe7;
+    padding: 5px;
+    padding-right: 20px;
+    border: solid 1px #b4a262;
+    float: right;
+
+}
+
+.container {
+
+    background: #b0ffb3;
+}
+.q {
+    background: #a5a5a1;
+}
+.w {
+    background: #78b462;
+}
+

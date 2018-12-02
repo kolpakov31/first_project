@@ -1,0 +1,300 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <meta Charset="utf-8"/>
+        <title>Изучаем JavaScript</title>
+    </head>
+
+    <body>
+    <p> "Надо учить Джава Скрипт и коды"</p>
+
+    <script tipe="text/javascript">
+
+        document.write("helloy World");
+        //mmmmmmmmmmmmm ;
+
+        var x = 5;
+        var y;
+        var result;
+        y = 12;
+        result = x + y;
+        document.write("<br /> " + result);
+
+        result = result + 1;
+        document.write("<br /> " + result);
+
+        result++;
+        document.write("<br /> " + result);
+
+        result += x;
+        document.write("<br /> " + result);
+
+        document.write("<br />" + x + " + " + y + " = " + (x + y));
+
+        document.write("<br />");
+
+        var str_1 = "3";
+        var str_2 = "4";
+        document.write(str_1 + str_2);
+
+        document.write("<br />");
+        var str_1 = ("3");
+        var str_2 = Number("4");
+        document.write(Number(str_1) + str_2);
+
+        document.write("<br />");
+        var bool;
+        var z = 6;
+        var d = 7;
+        bool = z < d;
+        document.write(bool);
+
+        document.write("<br />");
+        bool = z > d;
+        document.write(bool);
+        // Операторы ==,>=,<=,<,>,  true - верно,false - неверно
+        document.write("<br />");
+        document.write(10 + " % " + 7 + " = " + (10 % 7));
+        // Остаток 3  тоесть Цыклы  или  интервал чисел ...
+        document.write("<br />");
+
+        document.write("Урок №6 Условные операторы ");
+
+
+        //  Когда сравниваем ..... ==, !=,...  не равно
+        // Условные операторы
+        var x = 4;
+        var y = 5;
+        if (x > y)
+            document.write("<br />" + " x > y ");
+        else if (x == y)
+            document.write("<br/>" + " x == y ");
+        //else if (x < y)  тоже правильно
+        else
+            document.write("<br/>" + " x < y ");
+
+        document.write("<br />");
+        // Условный оператор свитч кейс ,кейс это случай,
+        var result = 5;
+        switch (result) {
+
+            case 1:
+                document.write("result = 1");
+                break;
+            case 2:
+                document.write("result = 2");
+                break;
+            case 3:
+                document.write("result = 3");
+                break;
+            case 4:
+                document.write("result = 4");
+                break;
+            default:
+                document.write("result > 4");
+        }
+
+        //Сложный условный оператор
+        document.write("<br />");
+        x < y ? document.write("YES") : document / write("NO");
+
+        document.write("<br />");
+        // Проверка нескольких переменных в одном условном аператоре
+
+        var x = 6;
+        var y = 5;
+        var bool = false;
+        if (x > y)
+            if (!bool)
+                document.write("<br />" + " x > y ");
+            else if (x == y)
+                document.write("<br/>" + " x == y ");
+            //else if (x < y)  тоже правильно
+            else
+                document.write("<br/>" + " x < y ");
+
+        document.write("<br />");
+
+        var x = 6;
+        var y = 5;
+        var bool = false;
+        if (x > y && bool == !true)
+
+            document.write("<br />" + " x > y ");
+        else if (x == y)
+            document.write("<br/>" + " x == y ");
+        //else if (x < y)  тоже правильно
+        else
+            document.write("<br/>" + " x < y ");
+
+        document.write("<br />");
+
+        var x = 5;
+        var y = 5;
+        var bool = false;
+        if (x < y || bool == true)
+
+            document.write("<br />" + " x > y ");
+        else if (x == y)
+            document.write("<br/>" + " x == y ");
+        //else if (x < y)  тоже правильно
+        else
+            document.write("<br/>" + " x < y ");
+
+        document.write("<br />");
+
+        document.write("Урок №7 Циклы ");
+        document.write("<br />");
+
+        //var i;   можно сразу записать в фор
+        for (var i = 0; i <= 100; i++) {
+            if (i % 3 == 0 && i != 0) continue;
+            if (i == 8) break;
+            document.write(i + " Hello <br />");
+        }
+        var x = 0;
+        while (x < 10) {
+            document.write(x + "<br />");
+            x += 2;
+        }
+        // Этот цикл срабатывает один раз и до конца
+        var y = 1000;
+        do {
+            document.write("Цикл сработал");
+        } while (y < 100);
+
+        document.write("<br />");
+        document.write("Урок 8 Методы  alert,confirm,promt ");
+        document.write("<br />");
+
+        // var person = "John";
+        //alert("Hello," + person);
+
+        //confirm ("Are you sure?");
+
+
+        // if (confirm("Are you sure?")) {
+        //    alert("Helo," +person);
+        //   } else
+        //   alert("Person not sure");
+
+        /*  var person;
+         if(confirm("Are you sure?")) {
+         person = prompt("Hi,what's your name?");
+         alert ("Hello, " + person);
+         } else
+         alert ("Person not sure"); */
+
+        document.write("<br />");
+        document.write("Урок 9 Массивы");
+        document.write("<br />");
+
+        //  var arr = new Array("str",1.23,7,false);
+        //В массиве счет начинаеться с нулевого элемента
+        // document.write(arr[0] + "<br />" + arr[2]);
+        //Индекс
+        //document.write("<br />" + arr.length);
+        //for(var i = 0; i<arr.lenghth
+
+
+        var arr = new Array("str", 1.23, 7, false);
+        for (var i = 0; i < arr.length; i++)
+            document.write(arr[i] + "<br />");
+        arr = new Array();
+        for (i = 0; i < 10; i++) {
+            arr[i] = i * 3;
+            document.write(arr[i] + "<br />");
+        }
+        var summ = 0;
+        for (i = 0; i < arr.length; i++)
+            summ += arr[i];
+        document.write("Среднее арифметическое -" + (summ / arr.length ));
+
+
+        document.write("<br />");
+        document.write("Урок 10  Многомерные массивы");
+        document.write("<br />");
+
+        var arr_1 = new Array();
+        var arr_2 = new Array();
+        var arr_3 = new Array();
+        for (var i = 0; i < 5; i++) arr_1[i] = i;
+        for (var i = 0; i < 10; i++) arr_2[i] = i;
+        for (var i = 0; i < 15; i++) arr_3[i] = i;
+
+        var arr = new Array(arr_1, arr_2, arr_3);
+        //Это и есть двухмерный массив
+
+        document.write(arr[0][4]);
+
+        document.write("<br />");
+
+        for (var x = 0; x < arr.length; x++) {
+
+            for (var j = 0; j < arr[x].length; j++) {
+
+                document.write(arr[x][j] + " ");
+
+            }
+            document.write("<br />");
+
+        }
+        document.write("<br />");
+        document.write("Урок 11 Функции они сокращают код");
+
+        document.write("<br />");
+
+        // function print(text) {
+        // document.write(text);
+        // }
+        //  print("Helloy");
+        //  print("<br />");
+        //  print("World");
+
+        //  То же самое только можно подругому записать ..параметры строки это text
+
+        document.write("<br />");
+
+        //  function print() {
+        //  document.write("Helloy < br /> World");
+        //  }
+        //  print();
+
+        //функцие бывают очень разными...это функция выводит текст ..а эта будет
+        // подсчитывать количество
+
+        var summ;
+
+        function print(text) {
+            document.write(text);
+        }
+
+        function count(x, y) {
+            summ = x + y;
+        }
+        print("Helloy");
+        count(5, 7);
+        print("<br />");
+        print(summ);
+
+        document.write("<br />");
+        document.write("Урок 12 Локальные и глобальные переменные");
+        //   Var i -глобальная переменная
+        var global = 12;
+        var i = 10;
+
+
+        // Отделенная часть кода
+        // var i -локальная переменная  не распространяеться на весь код
+        function test() {
+            global++;
+            var i = 5;
+        }
+
+        test();
+        document.write("<br />");
+        document.write("Global -" + global + ",variable i - " + i);
+
+    </script>
+    </body>
+    </html>

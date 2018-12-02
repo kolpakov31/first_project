@@ -1,0 +1,98 @@
+body {
+  margin: 20px;
+  padding: 20px;
+}
+
+.shap {
+
+    background-color: #e4e6a9;
+    text-align: center;
+    font-size: 38pt;
+    border-radius:25px;
+}
+.tt {
+
+    border-radius: 25px;
+    background-color: #bae695;
+
+}
+
+.tt:hover {
+
+    background-color: deepskyblue;
+}
+
+.shap:hover {
+
+    background-color: aqua;
+
+}
+
+.stranica {
+
+    position:relative;
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+
+    width: 25%;
+    float: left;
+}
+
+.box2 {
+
+    width: 25%;
+    float: left;
+}
+
+.box3 {
+
+    width: 25%;
+    float: left;
+}
+
+.box4 {
+
+    width: 25%;
+    float: left;
+}
+
+.boxi {
+
+    margin: 1px;
+}
+
+.boxidos {
+
+    border: 2px solid #ffee94;
+    margin:3px;
+    padding: 2px;
+    background-color: #f5ffc5;
+    border-radius: 10px;
+}
+
+.opis {
+
+    font-size: 18pt;
+    text-align: center;
+}
+
+.boxidos:hover {
+
+    background-color: #c9ffa0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

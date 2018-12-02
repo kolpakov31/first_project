@@ -1,0 +1,21 @@
+.container {
+    border: 1px red solid;
+}
+
+.left, .content1, .content2, .right {
+    display:block;float: left;
+}
+
+.left, .right {
+    width: 10%;
+    border: blue 1px solid;
+}
+
+.content1, .content2 {
+    border: 1px green solid;
+    width: 40%;
+}
+
+.image {
+    text-align: center;
+}

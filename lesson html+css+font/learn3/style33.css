@@ -1,0 +1,123 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    b1order: solid 2px #7eb679;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.son1 {
+    b1order: 3px solid red;
+    width: 33%;
+    float: left;
+}
+
+.son2 {
+    b1order: 3px solid #4cff74;
+    width: 33%;
+    float: left;
+}
+
+.son3 {
+    b1order: 3px solid #7339ff;
+    width: 32%;
+    float: left;
+}
+
+@font-face {
+
+    font-family: "AgoraSansPro";
+    src: url("fonts/AgoraSansProBlack.eot");
+    src: url("fonts/AgoraSansProBlack.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AgoraSansProBlack.woff") format("woff"),
+    url("fonts/AgoraSansProBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AgoraSansPro";
+    src: url("fonts/AgoraSansProBold.eot");
+    src: url("fonts/AgoraSansProBold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AgoraSansProBold.woff") format("woff"),
+    url("fonts/AgoraSansProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+
+    font-family: "AgoraSansPro";
+    src: url("fonts/AgoraSansProLight.eot");
+    src: url("fonts/AgoraSansProLight.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AgoraSansProLight.woff") format("woff"),
+    url("fonts/AgoraSansProLight.ttf") format("truetype");
+    font-style: oblique;
+    font-weight: normal;
+}
+
+@font-face {
+
+    font-family: "Aladdin";
+    src: url("fonts/AladdinRegular.eot");
+    src: url("fonts/AladdinRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AladdinRegular.woff") format("woff"),
+    url("fonts/AladdinRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
+
+    font-family: "Alexander";
+    src: url("fonts/AlexanderRegular.eot");
+    src: url("fonts/AlexanderRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AlexanderRegular.woff") format("woff"),
+    url("fonts/AlexanderRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+
+    font-family: "Alexandra";
+    src: url("fonts/AlexandraScriptRegular.eot");
+    src: url("fonts/AlexandraScriptRegular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/AlexandraScriptRegular.woff") format("woff"),
+    url("fonts/AlexandraScriptRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.naz {
+
+    font-family: "AgoraSansPro";
+    text-align: center;
+    color: #0000b4;
+    font-size:30pt;
+    font-style: oblique;
+
+}
+
+.inson {
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.element {
+    border: 1px solid #38a653;
+    padding: 0.5em;
+    background-color: #3ad15e;
+    border-radius: 9px;
+}
+
+.element:hover {
+    font-weight: bold;
+    background-color: #4cff74;
+}

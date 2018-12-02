@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    b1order: solid 2px #7eb679;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.son1 {
+    b1order: 3px solid red;
+    width: 33%;
+    float: left;
+}
+
+.son2 {
+    b1order: 3px solid #4cff74;
+    width: 33%;
+    float: left;
+}
+
+.son3 {
+    b1order: 3px solid #7339ff;
+    width: 32%;
+    float: left;
+}
+
+.naz {
+    font: 12pt/10pt sans-serif  ;
+    text-align: center;
+    color: #0000b4;
+}
+
+.inson {
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+.element {
+    border: 1px solid #38a653;
+    padding: 0.5em;
+    background-color: #4cff74;
+}

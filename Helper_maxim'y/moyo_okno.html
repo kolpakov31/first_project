@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styleM.css">
+    <script src="script.js"></script>
+    <script>
+        //передача элементов по id "a" и "b"
+        moyo_okno.onload = function () {
+            a = document.getElementById("a");
+            b = document.getElementById("b");
+        }
+
+        //показываем окно функции "showA"
+        function showA() {
+            //Задаем прозрачность и блокируем дисплей
+            //элемента "b"
+            b.style.filter = "alpha(opacity=80)";
+            b.style.opacity = 0.8;
+            b.style.display = "block";
+            // Задаем блокироваку и отступ сверху в 200px <a href="#" onclick="hideA();" class="pages"
+            //элемента "a"
+            a.style.display = "block";
+            a.style.top = "200px";
+            a.style.left = "400px";
+            a.style.textAlign = "center";
+        }
+
+        //Вызываем функцию "hideA", которая будет скрывать
+        //окно для элементов "a" и "b"
+        function hideA() {
+            b.style.display = "none";
+            a.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<a href="#" onclick="showA();" class="pages">Открыть</a>
+<div id="a">
+    <div id="moyo_okno">
+        <!-- Ваш текст -->
+        <a href="#" onclick="hideA();" class="pages"
+           style="float: right;">Закрыть</a>
+        <h1>
+            <div class="shap"> Введите свои данные</div>
+        </h1>
+        <h3 class="hhh" style="cursor: pointer;">Выберите ПО</h3>
+        <select id="selectvalue"
+        <option>Web-Сайт</option>
+        <option>Android-Приложение</option>
+        <option>Windows-Приложение</option>
+        <option>Java-Сервер</option>
+        <option>Работа с DataBase</option>
+        </select>
+        <br>
+        <h3>
+            <div class="jjj"> Введите свой телефон</div>
+        </h3>
+        <input type="search" name="search" placeholder="Телефон">
+        <br>
+        <h3>
+            <div class="kkk"> Введите свой E-mail</div>
+        </h3>
+        <input type="search" name="search" placeholder="E-mail">
+
+        <a href="#" onclick="hideA();" class="pages"
+           style="float: right;">Отправить</a>
+    </div>
+</div>
+<div id="b"></div>
+
+
+</body>
+</html>
+

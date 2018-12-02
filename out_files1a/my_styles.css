@@ -1,0 +1,21 @@
+table {
+    border-spacing: 0;
+}
+.main {
+    border-top: solid 1px #150dbb;
+    border-right: solid 1px #150dbb;
+    border-bottom: solid 1px #150dbb;
+}
+
+.main th {
+    border-bottom: solid 1px #150dbb;
+}
+
+.main th, .main td {
+    border-left: solid 1px #150dbb;
+    padding: 0.7rem;
+}
+
+a.operation {
+    padding: 0.1rem;
+}

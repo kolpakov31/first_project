@@ -1,0 +1,50 @@
+#b {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+    background: grey;
+    z-index:1;
+}
+
+#a {
+    border:1px solid black;
+    position:fixed;
+    background: #eff7ff;
+    z-index:3;
+    display:none;
+}
+
+#moyo_okno {
+    margin-left: auto;
+   /* padding:5px;
+    width: 450px;
+    height: 300px;*/
+    border: 2px solid blue;
+}
+
+a.pages
+{
+    background: #97cdff;
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a:hover.pages
+{
+    background: red;
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+}
+
+#shap
+{
+    border: solid 2px #7eb679;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}

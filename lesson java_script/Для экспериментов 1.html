@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type = "text/javascript">
+    document.write("Привет чувак? Как у тебя с памятью? Осталась еще?Тогда вперед...!!!");
+    print("<br>");
+    document.write("Тогда пойми как работают функция");
+    var x = 4;
+    var y;
+    var result;
+    y = 7;
+    result = x + y;
+    document.write("<br>" + result);
+    //Сокращенный код внизу
+    var summ;
+    function print(text) {
+        document.write(text);
+    }
+    function count(x, y) {
+        summ = x + y;
+    }
+    count(x, y);
+    print("<br />");
+    print(summ);
+
+    // Глобальные и локальные переменные,локальная переменная не распространяеться на весь код
+
+    var global = 15;
+    var i = 12;
+    function test() {
+        global++;
+        var i = 2;
+    }
+    test();
+    document.write("<br/>");
+    document.write("Global-" + global + ",variable i-" + i);
+
+    //Примеры как работает джава скрипт
+
+    var ten = 9;
+    console.log(ten * ten);
+    document.write("<br/>");
+    document.write(ten);
+
+    var ten = 10;
+    document.write("yyyyy" + ten * ten);
+
+    var mood = "легкое";
+    console.log(mood);
+    document.write(mood);
+    mood = "тяжелое";
+    console.log(mood);
+    document.write(mood);
+
+    var vasyaDept = 140;
+    vasyaDept = vasyaDept - 35;
+    console.log(vasyaDept);
+    document.write(vasyaDept);
+
+    var one = 1, two = 2;
+    console.log(one + two);
+
+    console.log(Math.max(2, 4));
+    console.log(Math.min(2, 4) + 100);
+
+    var x = 30;
+    console.log("the value of x is", x);
+    // → the value of x is 30
+
+    // alert ("Доброе утро");
+    // confirm("доброе утро")
+    // prompt("оброе утро");
+
+    // var theNumber = Number(prompt("Выбери число",""));
+    //  alert("Твое число -квадратный корень из "+ theNumber * theNumber);
+
+    var theNumber = prompt("Выбери число", "");
+    if (!isNaN(theNumber))
+        alert("Твое число-квадратный корень из " + theNumber * theNumber);
+    else
+        alert("почему число то не ввел?");
+
+   // var tr = document.getElementById('tr');
+   // var inputTxt = 'тут какойто текст';
+   // var td = document.createElement('td');
+    //Можно ли сделать как то так,чтобы создавался не <td> </td> элемент а элемент <td  id="identifier"></td>
+   // td.innerHTML = inputTxt;
+    //tr.appendChild(td);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.form.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function (){
+              $('#myForm').ajaxForm(
+                {
+                dataType: "json",
+                success: function (data) {
+                    $("#inp1").val(data.id);
+                    var temp = data.content + " " + data.key;
+                    $("#p1").text(temp);
+                }
+            });
+        });
+
+</script>
+</head>
+<body>
+<p>Входные значения</p>
+
+<form id="myForm" action="ajax2.php" method="post";
+<p> <input type="text"id="inp0" name="key">
+    <input type="submit" value="Отправить запрос" id="btn0">
+</p>
+
+</form>
+
+<p>Результаты обработки запроса:</p>
+<p><input type="text" id="inp1"></p>
+<p id ="p1"></p>
+
+</body>
+</html>
+

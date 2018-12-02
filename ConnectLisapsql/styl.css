@@ -1,0 +1,34 @@
+.table {
+        border-spacing: 0;
+}
+.main {
+    border-top: solid 3px #39a55d;
+    border-right: solid 3px #0000b4;
+    border-bottom: solid 3px  #6b7ad1;
+}
+.main th {
+    border-bottom: solid 2px #be2a22;
+}
+.main th, .main td {
+    border-left: solid 4px #4cff74;
+    padding: 0.7rem;
+
+}
+
+.main td {
+    border-bottom: dashed 1px #1b85ff;
+}
+
+a.operation {
+    padding: 0.1rem;
+}
+
+
+* {font:12px verdana;}
+div {border:1px solid #007200;}
+p {border:1px solid #0040A7; margin:5px;}
+span {border:1px solid #F58220;}
+table {border-collapse:collapse;}
+td {border:1px solid #ccc; padding:5px;}
+tr:hover {background:#E2EEFF;}
+tr:focus {background:#6598C7; color:#fff; outline:0;}

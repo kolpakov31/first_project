@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка фото по клику</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+       $("#button").click(function(){
+
+           $.ajax({
+           type:"POST",
+           url: "http://s4.fotokto.ru/photo/full/536/5368232.jpg",
+           dataType:"json",
+           success: function (data) {
+               console.log(data)
+           }});
+         });
+       });
+</script>
+</head>
+<body>
+<button id="button">load</button>
+</body>
+</html>

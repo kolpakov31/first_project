@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container1 {
+    width: 100%;
+    border: solid 2px #7eb679;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.son1 {
+    border: 3px solid red;
+    width: 33%;
+    float: left;
+}
+
+.son2 {
+    border: 3px solid #4cff74;
+    width: 33%;
+    float: left;
+}
+
+.son3 {
+    border: 3px solid #7339ff;
+    width: 32%;
+    float: left;
+}
