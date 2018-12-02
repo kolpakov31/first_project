@@ -8,20 +8,18 @@
     <link rel="stylesheet" type="text/css" href="styl1.css">
     <link rel="stylesheet" type="text/css" href="styl2.css">
     <script src="jquery.min.js"></script>
-    <script src="script1.js"></script>
+    <script src="script2.js"></script>
 </head>
 <body>
 <header>
     <div class="title">
         <a href="http://dvs.kz" class="btn">DVS.KZ</a>
-        <h1 class="test1">Сайт по ремонту JEEP GMC Ford</h1>
+        <h1>Сайт по ремонту JEEP GMC Ford</h1>
     </div>
     <br/>
 </header>
 <div class="container">
     <div class="fot">
-        <div class="test3">
-
         <img src="foto/wrangler.jpg">
         <img src="foto/ford_explorer.jpeg">
         <img src="foto/cherokee.jpg">
@@ -30,13 +28,11 @@
         <img src="foto/ford_tempo.jpg">
         <img src="foto/voyadger.jpeg">
         <img src="foto/pt_cruiser.jpg">
-
-        </div>
     </div>
     <br/><br/>
 </div>
 <div class="poisk">
-    <a class="test2">Введите запрос интересующей запчасти</a>
+    <a>Введите запрос интересующей Вас запчасти</a>
 </div>
 <?php
 $nai_zap = '';
@@ -58,7 +54,7 @@ $god_v_po = $_REQUEST["god_v_po"];
 <div class="container">
     <table>
         <tr>
-            <td><form method="get" action="index1.php">
+            <td><form method="get" action="index2.php">
                     <?php
                     if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
                         <input type="hidden" name="nai_zap" value="<?= $nai_zap ?>">
@@ -113,13 +109,19 @@ $god_v_po = $_REQUEST["god_v_po"];
                     </div>
                     <div class="btn1">
                         <input type="submit" value="Искать">
+
                     </div>
                 </form></td>
-
-
-         </tr>
+            <td valign="top">
+                <div id="search_s_plat"></div></td>
+            <td valign="top">
+                <div id="search_phone"></div></td>
+            <td valign="top">
+                <div id="search_a12"></div></td>
+            </tr>
     </table>
-</div>
+
+   </div>
 
 <?php
 if(empty($nai_zap)){
@@ -130,7 +132,7 @@ if(empty($nai_zap)){
 
     require_once "functions.php";
 
-    $query = "select x,x0,x8||' '||x9||' '||x11||' '||x12||'-'||x13||'г.в'||' '||x10||'L'||' '||v14,x1,x2||' '||x3,x6 from a12 WHERE 1 = 1 ";
+    $query = "select * from a12 WHERE 1 = 1 ";
 
     if (!empty($nai_zap)) {
         $query = $query . "and x1 ilike '%" . $nai_zap . "%'";
@@ -157,50 +159,90 @@ if(empty($nai_zap)){
     $result = pg_query($dbconn, $query) or die("Ошибка".pg_last_error($dbconn));
     if ($result)
         $rows = pg_num_rows($result); // количество полученных строк
+    echo "<table class='main' id='data'>
+    <tr>
+        <th>Ннакл</th>
+        <th>Рэнн</th>
+        <th>Наименование</th>
+        <th>Характеристика</th>
+        <th>Технич Характ</th>
+        <th>Состояние запчасти</th>
+        <th>Количество</th>
+        <th>Дата регистрации</th>
+        <th>Цена продажи</th>
+        <th>Фирма произв</th>
+        <th>Марка машины</th>
+        <th>Объем двигателя </th>
+        <th>Тип двигателя</th>
+        <th>Год выпуска с</th>
+        <th>Год выпуска по</th>
+        <th>Коробка</th>
+        <th>Раздатка</th>
+    </tr>";
 
-    echo "<table border='1' width='100%' class='main' id='data'>
-      <tr>
-        <td rowspan='4' class='shir'>
-              <div>
-                <div class='test'>
-                  <table>
-                      <tr class='naz'> 
-                          
-                                     
-                          <th class='head_row'>Машина</th>
-                          <th class='head_row'>Запчасть</th>
-                          <th class='head_row'>Тех  хар</th>
-                          <th class='head_row'>Дата добавления</th>
-                      </tr>";
     for ($i = 0; $i < $rows; ++$i) {
         $row = pg_fetch_row($result);
-    echo "<tr tabindex='-1' data-rnn ='$row[1]' data-n_nakl ='$row[0]'>";
-    for ($j = 0; $j < 6; ++$j) {
-        echo "<td class='head_row2'>$row[$j]</td>";
+        echo "<tr tabindex='-1' data-rnn='$row[1]' data-n_nakl = '$row[0]'>";
+        for ($j = 0; $j < 17; ++$j) {
+            echo "<td>$row[$j]</td>";
+        }
+        echo "</tr>\n";
     }
-    }
-    echo "</tr>\n";
-    echo "</table>";
-    echo "</div>";
-    echo "</div>";
-    echo "</td>";
-    echo "<tr>
-        <td valign = 'top'>
-          <div id = 'search_s_plat' ></div ></td>
-      </tr >";
-    echo "<tr >
-      <td valign = 'top'>
-          <div id = 'search_phone' ></div ></td>
-    </tr >";
-    echo "<tr >
-      <td valign = 'top'>
-          <div id = 'search_a12' ></div ></td>
-    </tr >";
     echo "</table>";
 // очищаем результат
-pg_free_result($result);
-pg_close($dbconn);
+    pg_free_result($result);
+    pg_close($dbconn);
 }
 ?>
+
+
+<h1 class="naz">Поиск запчастей</h1>
+<table border='1' width='100%'>
+    <tr>
+        <td rowspan="3" class="qqq">
+            <div class="tab">
+                <div>
+                    <table >
+                        <tr class="naz">
+                            <td class='head_row'>Машина</td>
+                            <td class='head_row'>Запчасть</td>
+                            <td class='head_row'>Тех. хар.</td>
+                            <td class='head_row'>Дата добавления</td>
+                        </tr>
+                        <tr data-rnn="" data-n_nakl="">
+
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                4
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+        <td>
+            5
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>

@@ -13,15 +13,14 @@ function getRow(e) {
 }
 //document.getElementById('data').addEventListener('click', getRow);
 function dataTrClicked(event) {
-    console.log(event.target.parentNode.getAttribute('data-rnn'));
-    searchTest(event.target.parentNode.getAttribute('data-rnn'));
-    searchZa(event.target.parentNode.getAttribute('data-n_nakl'));
-}
 
+   console.log(event.target.parentNode.getAttribute('data-rnn'));
+   searchTest(event.target.parentNode.getAttribute('data-rnn'));
+   searchZa(event.target.parentNode.getAttribute('data-n_nakl'));
+}
 $(document).ready(function() {
     $('.main').find('tr').on('click', dataTrClicked);
 });
-
 function searchTest(rnn){
     $.ajax({
         type:"POST",
@@ -42,20 +41,17 @@ function searchTest(rnn){
         }
     });
 }
-
-function searchZa(n_nakl){
+function searchZa(n_nakl) {
     $.ajax({
-        type:"POST",
-        data:"n_nakl=" + n_nakl + "&act=a12",
-        url:"ajax.php",
-        dataType:"html",
-        success:function(data) {
+        type: "POST",
+        data: "n_nakl=" + n_nakl + "&act=a12",
+        url: "ajax.php",
+        dataType: "html",
+        success: function (data) {
             $('#search_a12').html(data);
         }
     });
 }
-
-
 
 
 

@@ -12,7 +12,7 @@ switch($_POST['act']) {
             $rows = pg_num_rows($result); // количество полученных строк
         echo "<table class='main'>
  <tr> 
-        <th>Рэнн</th>
+        
         <th>ttype</th>   
         <th>Телефон</th>
         <th>Дата регистрации</th>
@@ -21,7 +21,10 @@ switch($_POST['act']) {
         for ($i = 0; $i < $rows; ++$i) {
             $row = pg_fetch_row($result);
             echo "<tr>";
-            for ($j = 0; $j < 5; ++$j) echo "<td>$row[$j]</td>";
+            echo "<td>$row[1]</td>";
+            echo "<td>$row[2]</td>";
+            echo "<td>$row[3]</td>";
+            echo "<td>$row[4]</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -48,7 +51,7 @@ switch($_POST['act']) {
         <th>Дополнительная информация</th>
         <th>Адрес СТО</th> 
         <th>Работа</th> 
-        <th>СТО наименование</th>
+        <th>СТО наименование</th>$j
         <th>is_master</th>
         <th>has_car</th> 
         <th>is_zakaz</th> 
@@ -64,8 +67,10 @@ switch($_POST['act']) {
         break;
 
 
+
+
     case 'a12':
-        $query = "select * from a12 WHERE  x = '" . $_POST['n_nakl'] . "'";
+        $query = "select x from a12 WHERE  x = '" . $_POST['n_nakl'] . "'";
 
         $result = pg_query($dbconn, $query) or die("Ошибка" . pg_last_error($dbconn));
         if ($result)
@@ -84,6 +89,20 @@ switch($_POST['act']) {
         <th>Фирма произв</th>
         <th>Марка машины</th>
         <th>Объем двигателя </th>
+        <th>Характеристика</th>
+        <th>Технич Характ</th>
+        <th>Состояние запчасти</th>
+        <th>Количество</th>
+        <th>Дата регистрации</th>
+        <th>Цена продажи</th>
+        <th>Фирма произв</th>
+        <th>Марка машины</th>
+        <th>Объем двигателя </th>
+        <th>Тип двигателя</th>
+        <th>Год выпуска с</th>
+        <th>Год выпуска по</th>
+        <th>Коробка</th>
+        <th>Раздатка</th>    
         <th>Тип двигателя</th>
         <th>Год выпуска с</th>
         <th>Год выпуска по</th>
@@ -98,10 +117,12 @@ switch($_POST['act']) {
         }
         echo "</table>";
         break;
+
 }
 // очищаем результат
 pg_free_result($result);
 pg_close($dbconn);
+
 ?>
 
 
