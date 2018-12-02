@@ -115,8 +115,6 @@ $god_v_po = $_REQUEST["god_v_po"];
                         <input type="submit" value="Искать">
                     </div>
                 </form></td>
-
-
          </tr>
     </table>
 </div>
@@ -164,9 +162,7 @@ if(empty($nai_zap)){
               <div>
                 <div class='test'>
                   <table>
-                      <tr class='naz'> 
-                          
-                                     
+                      <tr class='naz'>                                                              
                           <th class='head_row'>Машина</th>
                           <th class='head_row'>Запчасть</th>
                           <th class='head_row'>Тех  хар</th>
