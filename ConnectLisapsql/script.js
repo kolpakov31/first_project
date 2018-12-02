@@ -1,17 +1,4 @@
 
-function getParentTag(node,tag) {//Найти ближайшего родителя по tagName. Здесь мы движемся вверх, пока не встретим родителя, у которого тег = нашему заданному tag
-    if (node) {
-        return (node.tagName == tag) ? node :
-            getParentTag(node.parentElement,tag);
-    }
-    return null;
-}
-function getRow(e) {
-    var row = getParentTag(e.target,'TR');
-    if (!row) {return;}
-    //row.focus();
-}
-//document.getElementById('data').addEventListener('click', getRow);
 function dataTrClicked(event) {
 
    console.log(event.target.parentNode.getAttribute('data-rnn'));
