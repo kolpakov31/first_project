@@ -11,20 +11,19 @@ switch($_POST['act']) {
         if ($result)
             $rows = pg_num_rows($result); // количество полученных строк
         echo "<table class='main'>
- <tr> 
-        
-        <th>ttype</th>   
+     <tr>  
         <th>Телефон</th>
         <th>Дата регистрации</th>
         <th>Дополнительно</th>
- </tr>";
+     </tr>";
         for ($i = 0; $i < $rows; ++$i) {
             $row = pg_fetch_row($result);
             echo "<tr>";
-            echo "<td>$row[1]</td>";
+
             echo "<td>$row[2]</td>";
             echo "<td>$row[3]</td>";
             echo "<td>$row[4]</td>";
+
             echo "</tr>";
         }
         echo "</table>";
@@ -39,35 +38,29 @@ switch($_POST['act']) {
         if ($result)
             $rows = pg_num_rows($result); // количество полученных строк
         echo "<table class='main'>
- <tr> 
-        <th>Рэнн</th>
-        <th>Фамилия</th>
-        <th>pref</th>
-        <th>Имя</th>
-        <th>Отчество</th>
+ <tr>    
+        <th>Фамилия Имя Отчество</th>
         <th>Дата рождения</th>
         <th>Дата регистрации</th>
         <th>Адрес</th>
         <th>Дополнительная информация</th>
-        <th>Адрес СТО</th> 
-        <th>Работа</th> 
-        <th>СТО наименование</th>$j
-        <th>is_master</th>
-        <th>has_car</th> 
-        <th>is_zakaz</th> 
-        <th>is_red</th>           
+                     
  </tr>";
         for ($i = 0; $i < $rows; ++$i) {
             $row = pg_fetch_row($result);
             echo "<tr>";
-            for ($j = 0; $j < 16; ++$j) echo "<td>$row[$j]</td>";
+            //for ($j = 0; $j < 16; ++$j) echo "<td>$row[$j]</td>";
+
+            echo "<td>$row[1] $row[3] $row[4] </td>";
+            echo "<td>$row[5]</td>";
+            echo "<td>$row[6]</td>";
+            echo "<td>$row[7]</td>";
+            echo "<td>$row[9]</td>";
+
             echo "</tr>";
         }
         echo "</table>";
         break;
-
-
-
 
     case 'a12':
         $query = "select * from a12 WHERE  x = '" . $_POST['n_nakl'] . "'";
@@ -77,47 +70,30 @@ switch($_POST['act']) {
             $rows = pg_num_rows($result); // количество полученных строк
         echo "<table class='main'>
     <tr> 
-        <th>Ннакл</th>
-        <th>Рэнн</th>
-        <th>Наименование</th>
-        <th>Характеристика</th>
-        <th>Технич Характ</th>
+      
+        <th>Наименование Характеристика</th>
+        <th>Дата регистрации</th>        
         <th>Состояние запчасти</th>
         <th>Количество</th>
-        <th>Дата регистрации</th>
         <th>Цена продажи</th>
-        <th>Фирма произв</th>
-        <th>Марка машины</th>
-        <th>Объем двигателя </th>
-        <th>Тип двигателя</th>
-        <th>Год выпуска с</th>
-        <th>Год выпуска по</th>
-        <th>Коробка</th>
-        <th>Раздатка</th>  
+    
     </tr>";
         for ($i = 0; $i < $rows; ++$i) {
             $row = pg_fetch_row($result);
             echo "<tr>";
 
-            for ($j = 0; $j < 17; ++$j) echo "<td>$row[$j]</td>";
+            // for ($j = 0; $j < 17; ++$j) echo "<td>$row[$j]</td>";
 
-           // echo "<td>$row[2] $row[3] <br>($row[6] шт.)</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-           // echo "<td>$row[0]</td>";
-
+            echo "<td>$row[2] $row[3]</td>";
+            echo "<td>$row[7]</td>";
+            echo "<td>$row[5]</td>";
+            echo "<td>$row[6](шт)</td>";
+            echo "<td>$row[8]</td>";
 
             echo "</tr>";
         }
         echo "</table>";
         break;
-
 }
 // очищаем результат
 pg_free_result($result);
