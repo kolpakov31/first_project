@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styl1.css">
     <link rel="stylesheet" type="text/css" href="styl2.css">
     <script src="jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </head>
 <body>
 <header>
