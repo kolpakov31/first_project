@@ -81,44 +81,6 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-.test1:hover{
-    animation-play-state: paused;
-}
-@keyframes test-22{
-    from {margin-left: 1px;}
-    50% {margin-left: 600px;}
-    to {margin-left:1px;}
-}
-
-.test2{
-    animation-name: test-11;
-    animation-duration: 60s;
-
-    аnimation-direction:alternate-reverse;
-    color: lemonchiffon;
-    font-size: 20px;
-    font-weight: bold;
-}
-@keyframes test-11{
-    from {margin-left: 1px;}
-    to {margin-left: 600px;}
-}
-
-
-.test3{
-
-    animation-name: test-2;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-
-}
-@keyframes test-2{
-    from {margin-left: 1px;}
-    to {margin-left: 3px;}
-}
-
-
-
 
 .poisk1{
     margin-bottom: 0.1%;
@@ -126,8 +88,6 @@ body {
     color: #e4e6a9;
     width: 50%;
     margin-left: 0.15%;
-
-
 }
 
 @media screen and (max-width: 768px) {
