@@ -14,14 +14,12 @@
 <header>
     <div class="title">
         <a href="http://dvs.kz" class="btn">DVS.KZ</a>
-        <h1 class="test1">Сайт по ремонту JEEP GMC Ford</h1>
+        <h1>Сайт по ремонту JEEP GMC Ford</h1>
     </div>
     <br/>
 </header>
 <div class="container">
     <div class="fot">
-        <div class="test3">
-
         <img src="foto/wrangler.jpg">
         <img src="foto/ford_explorer.jpeg">
         <img src="foto/cherokee.jpg">
@@ -30,13 +28,11 @@
         <img src="foto/ford_tempo.jpg">
         <img src="foto/voyadger.jpeg">
         <img src="foto/pt_cruiser.jpg">
-
-        </div>
     </div>
     <br/><br/>
 </div>
 <div class="poisk">
-    <a class="test2">Введите запрос интересующей запчасти</a>
+    <h1>Введите запрос интересующей запчасти</h1>
 </div>
 <?php
 $nai_zap = '';
