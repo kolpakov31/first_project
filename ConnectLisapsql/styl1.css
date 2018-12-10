@@ -24,9 +24,10 @@ body {
     height: 100%;
     width: 100%;
     border: solid 2px #7eb679;
+}
+.container  button:last-child  {
 
 }
-
 
 .fot img{
     margin-top: 2.5%;
@@ -59,19 +60,23 @@ body {
     height: 27%;
     text-align: center;
 }
-.container  button:last-child  {
 
-}
-.poisk {
+.zag {
     margin-bottom: 0.15%;
     margin-left: 0.15%;
     margin-top: 7%;
-    text-align: justify-all;
+    text-align: center;
     background-color: darkgreen;
     color: lightgoldenrodyellow;
-    font-size: 130%;
 }
-
+.zag1{
+    font-size: 220%;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+    background-color: darkgreen;
+    color: lightgoldenrodyellow;
+}
 .test1{
     animation-name: test-22;
     animation-duration: 120s;
@@ -102,5 +107,10 @@ body {
     }
 
 }
+
+
+
+
+
 
 
