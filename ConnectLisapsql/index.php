@@ -51,9 +51,9 @@ $god_v_s = $_REQUEST["god_v_s"];
 $god_v_po = $_REQUEST["god_v_po"];
 ?>
 <div class="container1">
-    <table class="prob">
+    <table>
         <tr>
-            <td><form method="get" action="index.php">
+            <td><form method="get" action="index.php" class="tesst1">
                     <?php
                     if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
                         <input type="hidden" name="nai_zap" value="<?= $nai_zap ?>">
@@ -111,7 +111,7 @@ $god_v_po = $_REQUEST["god_v_po"];
                     </div>
                 </form></td>
 
-            <td><form method="get" action="index1.php">
+            <td><form method="get" action="index1.php" class="tesst2">
 
                     <?php
                     if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
@@ -169,6 +169,9 @@ $god_v_po = $_REQUEST["god_v_po"];
                         <input type="submit" value="Введите свою запчасть">
                     </div>
               </form></td>
+            <td>
+                <iframe src="index1.php" class="iframe"></iframe>
+            </td>
          </tr>
     </table>
 </div>
