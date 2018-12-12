@@ -13,6 +13,34 @@
 <header class="zag1">
     Зарегистрируйтесь!!!
 </header>
+<?php
+$nai_zap = '';
+$xar_zap = '';
+$firm_pr = '';
+$mark_ma = '';
+$ob_dv = '';
+$god_v_s = '';
+$god_v_po = '';
+
+$nai_zap = $_REQUEST["nai_zap"];
+$xar_zap = $_REQUEST["xar_zap"];
+$firm_pr = $_REQUEST["firm_pr"];
+$mark_ma = $_REQUEST["mark_ma"];
+$ob_dv = $_REQUEST["ob_dv"];
+$god_v_s = $_REQUEST["god_v_s"];
+$god_v_po = $_REQUEST["god_v_po"];
+?>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
