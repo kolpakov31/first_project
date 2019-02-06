@@ -107,11 +107,11 @@ $god_v_po = $_REQUEST["god_v_po"];
                                                       placeholder="Введите год выпуска машины по">
                     </div>
                     <div class="btn1">
-                        <input type="submit" value="Искать">
+                        <input type="submit" value="Искать интересующую Вас запчасть">
                     </div>
                 </form></td>
 
-            <td><form method="get" action="index1.php" class="tesst2">
+            <td><form method="get" action="list.php" class="tesst2">
 
                     <?php
                     if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
@@ -166,12 +166,10 @@ $god_v_po = $_REQUEST["god_v_po"];
                                                       placeholder="Введите год выпуска машины по">
                     </div>
                     <div class="btn1">
-                        <input type="submit" value="Введите свою запчасть">
+                        <input type="submit" value="Введите свои оставшиеся запчасти">
                     </div>
               </form></td>
-            <td>
-                <iframe src="index1.php" class="iframe"></iframe>
-            </td>
+
          </tr>
     </table>
 </div>
