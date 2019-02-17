@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,134 +52,106 @@ $god_v_po = $_REQUEST["god_v_po"];
 <div class="container1">
     <table>
         <tr>
-            <td><form method="get" action="index.php" class="tesst1">
+            <td>
+                <form method="get" action="index.php" class="tesst1">
+
                     <?php
-                    if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
+                    if ($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
                         <input type="hidden" name="nai_zap" value="<?= $nai_zap ?>">
                         <input type="hidden" name="xar_zap" value="<?= $xar_zap ?>">
                         <input type="hidden" name="firm_pr" value="<?= $firm_pr ?>">
                         <input type="hidden" name="mark_ma" value="<?= $mark_ma ?>">
-                        <input type="text" name= ob_dv value="<?= $ob_dv ?>">
-                        <input type="number" name= god_v_s value="<?= $god_v_s ?>">
-                        <input type="number" name= god_v_po value="<?= $god_v_po ?>">
+                        <input type="text" name=ob_dv value="<?= $ob_dv ?>">
+                        <input type="number" name=god_v_s value="<?= $god_v_s ?>">
+                        <input type="number" name=god_v_po value="<?= $god_v_po ?>">
                     <?php endif ?>
-                    <div class="poisk1">
-                        Наименование запчасти: <input type="text"
-                                                      name="nai_zap"
-                                                      value="<?= $nai_zap ?>"
-                                                      placeholder="Введите наименование запчасти">
-                    </div>
-                    <div class="poisk1">
-                        Введите характеристику запчасти: <input type="text"
-                                                                name="xar_zap"
-                                                                value="<?= $xar_zap ?>"
-                                                                placeholder="Введите сюда характеристику запчасти">
-                    </div>
-                    <div class="poisk1">
-                        Введите фирму производителя: <input type="text"
-                                                            name="firm_pr"
-                                                            value="<?= $firm_pr ?>"
-                                                            placeholder="Введите фирму производителя">
-                    </div>
-                    <div class="poisk1">
-                        Введите марку машины: <input type="text"
-                                                     name="mark_ma"
-                                                     value="<?= $mark_ma ?>"
-                                                     placeholder="Введите марку машины">
-                    </div>
-                    <div class="poisk1">
-                        Объем двигателя: <input type="text"
-                                                name = ob_dv
-                                                value="<?= $ob_dv ?>"
-                                                placeholder="Введите сюда объем двигателя">
-                    </div>
-                    <div class="poisk1">
-                        Год выпуска машины с: <input type="number"
-                                                     name = god_v_s
-                                                     value="<?= $god_v_s ?>"
-                                                     placeholder="Введите год выпуска машины с">
-                    </div>
-                    <div class="poisk1">
-                        Год выпуска машины по: <input type="number"
-                                                      name = god_v_po
-                                                      value="<?= $god_v_po ?>"
-                                                      placeholder="Введите год выпуска машины по">
-                    </div>
-                    <div class="btn1">
-                        <input type="submit" value="Искать интересующую Вас запчасть">
-                    </div>
-                </form></td>
 
-            <td><form method="get" action="list.php" class="tesst2">
+                    <div class="poisk1">
+                        Наименование запчасти:
+                        <input type="text" name="nai_zap" value="<?= $nai_zap ?>"
+                               placeholder="Введите наименование запчасти">
 
+                        Введите характеристику запчасти:
+                        <input type="text" name="xar_zap" value="<?= $xar_zap ?>"
+                               placeholder="Введите сюда характеристику запчасти">
+
+                        Введите фирму производителя:
+                        <input type="text" name="firm_pr" value="<?= $firm_pr ?>"
+                               placeholder="Введите фирму производителя">
+
+                        Введите марку машины:
+                        <input type="text" name="mark_ma" value="<?= $mark_ma ?>" placeholder="Введите марку машины">
+
+                        Объем двигателя:
+                        <input type="text" name=ob_dv value="<?= $ob_dv ?>" placeholder="Введите сюда объем двигателя">
+
+                        Год выпуска машины с:
+                        <input type="number" name=god_v_s value="<?= $god_v_s ?>"
+                               placeholder="Введите год выпуска машины с">
+
+                        Год выпуска машины по:
+                        <input type="number" name=god_v_po value="<?= $god_v_po ?>"
+                               placeholder="Введите год выпуска машины по">
+                    </div>
+                    <div class="btn1"><input type="submit" value="Искать интересующую Вас запчасть"></div>
+                </form>
+            </td>
+
+            <td>
+                <form method="get" action="list.php" class="tesst2">
 
                     <?php
-                    if($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
+                    if ($nai_zap and $xar_zap and $firm_pr and $mark_ma and $ob_dv and $god_v_s and $god_v_po):?>
                         <input type="hidden" name="nai_zap" value="<?= $nai_zap ?>">
                         <input type="hidden" name="xar_zap" value="<?= $xar_zap ?>">
                         <input type="hidden" name="firm_pr" value="<?= $firm_pr ?>">
                         <input type="hidden" name="mark_ma" value="<?= $mark_ma ?>">
-                        <input type="text" name= ob_dv value="<?= $ob_dv ?>">
-                        <input type="number" name= god_v_s value="<?= $god_v_s ?>">
-                        <input type="number" name= god_v_po value="<?= $god_v_po ?>">
+                        <input type="text" name=ob_dv value="<?= $ob_dv ?>">
+                        <input type="number" name=god_v_s value="<?= $god_v_s ?>">
+                        <input type="number" name=god_v_po value="<?= $god_v_po ?>">
                     <?php endif ?>
-                    <div class="poisk1">
-                        Наименование запчасти: <input type="text"
-                                                      name="nai_zap"
-                                                      value="<?= $nai_zap ?>"
-                                                      placeholder="Введите наименование запчасти">
-                    </div>
-                    <div class="poisk1">
-                        Введите характеристику запчасти: <input type="text"
-                                                                name="xar_zap"
-                                                                value="<?= $xar_zap ?>"
-                                                                placeholder="Введите сюда характеристику запчасти">
-                    </div>
-                    <div class="poisk1">
-                        Введите фирму производителя: <input type="text"
-                                                            name="firm_pr"
-                                                            value="<?= $firm_pr ?>"
-                                                            placeholder="Введите фирму производителя">
-                    </div>
-                    <div class="poisk1">
-                        Введите марку машины: <input type="text"
-                                                     name="mark_ma"
-                                                     value="<?= $mark_ma ?>"
-                                                     placeholder="Введите марку машины">
-                    </div>
-                    <div class="poisk1">
-                        Объем двигателя: <input type="text"
-                                                name = ob_dv
-                                                value="<?= $ob_dv ?>"
-                                                placeholder="Введите сюда объем двигателя">
-                    </div>
-                    <div class="poisk1">
-                        Год выпуска машины с: <input type="number"
-                                                     name = god_v_s
-                                                     value="<?= $god_v_s ?>"
-                                                     placeholder="Введите год выпуска машины с">
-                    </div>
-                    <div class="poisk1">
-                        Год выпуска машины по: <input type="number"
-                                                      name = god_v_po
-                                                      value="<?= $god_v_po ?>"
-                                                      placeholder="Введите год выпуска машины по">
-                    </div>
-                    <div class="btn1">
-                        <input type="submit" value="Введите свои оставшиеся запчасти">
-                    </div>
-              </form></td>
 
-         </tr>
+                    <div class="poisk1">
+                        Наименование запчасти:
+                        <input type="text" name="nai_zap" value="<?= $nai_zap ?>"
+                               placeholder="Введите наименование запчасти">
+
+                        Введите характеристику запчасти:
+                        <input type="text" name="xar_zap" value="<?= $xar_zap ?>"
+                               placeholder="Введите сюда характеристику запчасти">
+
+                        Введите фирму производителя:
+                        <input type="text" name="firm_pr" value="<?= $firm_pr ?>"
+                               placeholder="Введите фирму производителя">
+
+                        Введите марку машины:
+                        <input type="text" name="mark_ma" value="<?= $mark_ma ?>" placeholder="Введите марку машины">
+
+                        Объем двигателя:
+                        <input type="text" name=ob_dv value="<?= $ob_dv ?>" placeholder="Введите сюда объем двигателя">
+
+                        Год выпуска машины с:
+                        <input type="number" name=god_v_s value="<?= $god_v_s ?>"
+                               placeholder="Введите год выпуска машины с">
+
+                        Год выпуска машины по:
+                        <input type="number" name=god_v_po value="<?= $god_v_po ?>"
+                               placeholder="Введите год выпуска машины по">
+                    </div>
+                    <div class="btn1"><input type="submit" value="Искать интересующую Вас запчасть"></div>
+                </form>
+            </td>
+
+        </tr>
     </table>
 </div>
 
 <?php
-if(empty($nai_zap)){
+if (empty($nai_zap)) {
 
     echo '';
 
-}else{
+} else {
 
     require_once "functions.php";
 
@@ -208,7 +179,7 @@ if(empty($nai_zap)){
         $query = $query . "and x13 <= $god_v_po";
     }
 
-    $result = pg_query($dbconn, $query) or die("Ошибка".pg_last_error($dbconn));
+    $result = pg_query($dbconn, $query) or die("Ошибка" . pg_last_error($dbconn));
     if ($result)
         $rows = pg_num_rows($result); // количество полученных строк
 
@@ -226,10 +197,10 @@ if(empty($nai_zap)){
                       </tr>";
     for ($i = 0; $i < $rows; ++$i) {
         $row = pg_fetch_row($result);
-    echo "<tr tabindex='-1' data-rnn ='$row[1]' data-n_nakl ='$row[0]'>";
-    for ($j = 0; $j < 6; ++$j) {
-        echo "<td class='head_row2'>$row[$j]</td>";
-    }
+        echo "<tr tabindex='-1' data-rnn ='$row[1]' data-n_nakl ='$row[0]'>";
+        for ($j = 0; $j < 6; ++$j) {
+            echo "<td class='head_row2'>$row[$j]</td>";
+        }
     }
     echo "</tr>\n";
     echo "</table>";
@@ -250,8 +221,8 @@ if(empty($nai_zap)){
     </tr >";
     echo "</table>";
 // очищаем результат
-pg_free_result($result);
-pg_close($dbconn);
+    pg_free_result($result);
+    pg_close($dbconn);
 }
 ?>
 </body>
